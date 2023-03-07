@@ -70,7 +70,7 @@
 7. Идем в настройки аккаунта на GitHub
 
 <div align="center">
-    <img src="assets/Рисунок15.png">
+    <img src="assets/Рисунок15.png" width="200">
 </div>
 
 8. Нажимаем кнопку New SSH Key и в открывшемся окне вставляем содержимое из файла `id_rsa.pub` и вводим название ключа
