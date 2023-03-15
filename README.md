@@ -82,5 +82,124 @@
 ### Итог
 На этом установка необходимого ПО завершена.
 Необходимо переходить к инструкциям по настройке VS Code и использование GitHub
+</details>
 
+<details>
+<summary>Ubuntu</summary>
+
+### Установка VS Code
+<details>
+<summary>Через пакет</summary>
+<br/>
+
+- Переходим на сайт code.visualstudio.com, секция Download. Нажимаем и скачиваем себе на ПК.
+- Устанавливаем
+</details>
+
+<details>
+<summary>Через терминал</summary>
+
+1. Заходим на оф.сайт https://code.visualstudio.com/docs/setup/setup-overview и выбираем Linux. По инструкции вводим следующие команды в терминал для Убунту
+
+`sudo apt-get install wget gpg`\
+`wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg`\
+`sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg`\
+`sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'`\
+`rm -f packages.microsoft.gpg`\
+`sudo apt install apt-transport-https`\
+`sudo apt update`\
+`sudo apt install code`
+</details>
+
+### Установка Git
+
+- Ввести в терминал
+`sudo apt update`\
+Возможно, вас попросят ввести пароль. Введите пароль. <strong>Внимание:</strong> его не будет видно в терминале, это нормально.
+
+`sudo apt upgrade`\
+`sudo apt install git`
+
+- Можно проверить, что у вас установился `git`, введя в терминале `git`. Должен открыться список команд.
+
+### Настройка Git
+
+1. В терминале необходимо ввести две команды
+`git config --global user.name "Ваш никнейм на github"`
+`git config --global user.email ВашEmailНаGithub@example.com`
+2. Проверяем коммандой `git config --list`
+
+### Генерация ключа  SSH
+
+1. Открываем терминал
+2. Вводим команду `ssh-keygen -t ed25519 -C "ваш_email@example.com"`
+3. Приложение запросит место сохранения, предлагая по умолчанию, нажимаем `Enter`
+4. Далее вам будет предложено ввести кодовую фразу. Нажмите клавишу `Enter`, чтобы пропустить
+5. Подтверждение кодовой фразы также пропускаем
+6. После генерации идем по пути из 3го пункта и открываем файл `id_ed25519.pub` любым текстовым редактором и копируем содержимое.
+7. Идем в настройки аккаунта на GitHub
+
+<div align="center">
+    <img src="assets/Рисунок15.png" width="200">
+</div>
+
+8. Нажимаем кнопку New SSH Key и в открывшемся окне вставляем содержимое из файла `id_ed25519.pub` и вводим название ключа
+
+<div align="center">
+    <img src="assets/Рисунок16.png">
+</div>
+
+### Итог
+
+На этом установка необходимого ПО завершена.
+Необходимо переходить к инструкциям по настройке VS Code и использование GitHub
+</details>
+
+<details>
+<summary>MacOS</summary>
+
+### Установка VS Code
+
+1. Заходим на оф.сайт https://code.visualstudio.com/docs/setup/setup-overview и выбираем macOS. По инструкции открываем первую ссылку и скачиваем пакет в виде архива.
+2. Нам необходимо распаковать архив и перетащить `Visual Studio Code.app` в папку `Applications`.
+3. Добавим Visual Studio Code в `Dock`, выбрав в `Options` `«Keep in Dock»`
+
+### Установка Git
+
+- Если у вас нет пакетного менеджера Brew, необходимо сначала установить его. Переходит на оф. сайт и https://brew.sh/ и копируем команду оттуда
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+- Затем вводим в терминал `brew install git`
+- Можно проверить, что у вас установился `git`, введя в терминале `git`. Должен открыться список команд.
+
+### Настройка Git
+
+1. В терминале необходимо ввести две команды
+`git config --global user.name "Ваш никнейм на github"`
+`git config --global user.email ВашEmailНаGithub@example.com`
+2. Проверяем коммандой `git config --list`
+
+### Генерация ключа  SSH
+
+1. Открываем терминал
+2. Вводим команду `ssh-keygen -t ed25519 -C "ваш_email@example.com"`
+3. Приложение запросит место сохранения, предлагая по умолчанию, нажимаем `Enter`
+4. Далее вам будет предложено ввести кодовую фразу. Нажмите клавишу `Enter`, чтобы пропустить
+5. Подтверждение кодовой фразы также пропускаем
+6. После генерации идем по пути из 3го пункта и открываем файл `id_ed25519.pub` любым текстовым редактором и копируем содержимое.
+7. Идем в настройки аккаунта на GitHub
+
+<div align="center">
+    <img src="assets/Рисунок15.png" width="200">
+</div>
+
+8. Нажимаем кнопку New SSH Key и в открывшемся окне вставляем содержимое из файла `id_ed25519.pub` и вводим название ключа
+
+<div align="center">
+    <img src="assets/Рисунок16.png">
+</div>
+
+### Итог
+
+На этом установка необходимого ПО завершена.
+Необходимо переходить к инструкциям по настройке VS Code и использование GitHub
 </details>
