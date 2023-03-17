@@ -111,6 +111,12 @@
 `sudo apt install code`
 </details>
 
+### Установка Node.js
+
+- Ввести в терминал `sudo apt update`
+- `sudo apt install nodejs`
+-  Проверить можно командой `node -v`или `nodejs -v`. Должен показаться номер вашей версии Node.js
+
 ### Установка Git
 
 - Ввести в терминал
@@ -170,6 +176,12 @@
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 - Затем вводим в терминал `brew install git`
 - Можно проверить, что у вас установился `git`, введя в терминале `git`. Должен открыться список команд.
+
+### Установка Node.js
+
+- Ввести в терминал `brew update`
+- `brew install node`
+-  Проверить можно командой `node -v. Должен показаться номер вашей версии Node.js
 
 ### Настройка Git
 
