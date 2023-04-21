@@ -8,13 +8,13 @@
 1. Заходим на оф.сайт https://code.visualstudio.com/ и нажимаем кнопку Download for Windows
 
 <div align="center">
-    <img src="assets/Рисунок1.png">
+    <img src="./assets/Рисунок1.png">
 </div>
 
 2.  Запускаем инсталятор и выбираем путь и параметры, дожидаемся конца установки
 
 <div align="center">
-    <img src="assets/Рисунок2.png">
+    <img src="./assets/Рисунок2.png">
 </div>
 
 3. Запускаем VS Code (VS Code предложит установить языковой пакет, соглашаемся если нужно, перезапустится)
@@ -27,7 +27,7 @@
 4. Перезапускаем VS Code, открываем терминал и проверяем версию командой node -v
 
 <div align="center">
-    <img src="assets/Рисунок3.png">
+    <img src="./assets/Рисунок3.png">
 </div>
 Должно получиться так, только с номером вашей LTS версии.
 
@@ -36,17 +36,17 @@
 1. Идем на оф.сайт https://git-scm.com/download/win и качаем Standalone Installer нужной разрядности
 2. Запускаем инсталятор и следуем инструкциям на скриншотах
 <div align="center">
-    <img src="assets/Рисунок4.png">
-    <img src="assets/Рисунок5.png">
-    <img src="assets/Рисунок6.png">
-    <img src="assets/Рисунок7.png">
-    <img src="assets/Рисунок8.png">
-    <img src="assets/Рисунок9.png">
-    <img src="assets/Рисунок10.png">
-    <img src="assets/Рисунок11.png">
-    <img src="assets/Рисунок12.png">
-    <img src="assets/Рисунок13.png">
-    <img src="assets/Рисунок14.png">
+    <img src="./assets/Рисунок4.png">
+    <img src="./assets/Рисунок5.png">
+    <img src="./assets/Рисунок6.png">
+    <img src="./assets/Рисунок7.png">
+    <img src="./assets/Рисунок8.png">
+    <img src=./assets/Рисунок9.png">
+    <img src="./assets/Рисунок10.png">
+    <img src="./assets/Рисунок11.png">
+    <img src="./assets/Рисунок12.png">
+    <img src="./assets/Рисунок13.png">
+    <img src="./assets/Рисунок14.png">
 </div>
 
 ### Настройка Git bash
@@ -70,13 +70,13 @@
 7. Идем в настройки аккаунта на GitHub
 
 <div align="center">
-    <img src="assets/Рисунок15.png" width="200">
+    <img src="./assets/Рисунок15.png" width="200">
 </div>
 
 8. Нажимаем кнопку New SSH Key и в открывшемся окне вставляем содержимое из файла `id_rsa.pub` и вводим название ключа
 
 <div align="center">
-    <img src="assets/Рисунок16.png">
+    <img src="./assets/Рисунок16.png">
 </div>
 
 ### Итог
@@ -146,13 +146,13 @@
 7. Идем в настройки аккаунта на GitHub
 
 <div align="center">
-    <img src="assets/Рисунок15.png" width="200">
+    <img src="./assets/Рисунок15.png" width="200">
 </div>
 
 8. Нажимаем кнопку New SSH Key и в открывшемся окне вставляем содержимое из файла `id_ed25519.pub` и вводим название ключа
 
 <div align="center">
-    <img src="assets/Рисунок16.png">
+    <img src="./assets/Рисунок16.png">
 </div>
 
 ### Итог
@@ -201,17 +201,59 @@
 7. Идем в настройки аккаунта на GitHub
 
 <div align="center">
-    <img src="assets/Рисунок15.png" width="200">
+    <img src="./assets/Рисунок15.png" width="200">
 </div>
 
 8. Нажимаем кнопку New SSH Key и в открывшемся окне вставляем содержимое из файла `id_ed25519.pub` и вводим название ключа
 
 <div align="center">
-    <img src="assets/Рисунок16.png">
+    <img src="./assets/Рисунок16.png">
 </div>
 
 ### Итог
 
 На этом установка необходимого ПО завершена.
 Необходимо переходить к инструкциям по настройке VS Code и использование GitHub
+</details>
+
+# Оптимизация работы в VSCode
+
+<details>
+<summary>Автосохранение</summary>
+Настройте в VSCode автоматическое сохранение файла при редактировании.
+
+<div align="center">
+    <img src="./assets/auto-save.jpg">
+</div>
+
+</details>
+
+<details>
+<summary>Расширения</summary>
+
+### Live Server
+> Расширение позволяет автоматически перезагружать страницу после внесения изменений в js, css, html-код. Это упрощает отладку отдельных HTML-страниц со скриптами.
+
+После установки в правом нижнем углу появится кнопка `Go Live`. Достаточно открыть в VSCode html документ, нажать на кнопку `Go Live` и спустя несколько секунд html автоматически откроется в вашем браузере по умолчанию.
+
+### Code Runner
+> Расширение позволяет запускать js код внутри VSCode.
+
+После установки в правом верхнем углу появится кнопка в виде треугольника (см. скрин). Внимание: DOM не будет запускаться внутри VSCode, он работает только в браузере.
+<div align="center">
+    <img src="./assets/code-runner-work.jpg">
+</div>
+
+### Prettier
+> Пакет для автоматического форматирования кода, который поддерживает JavaScript, TypeScript, CSS и множество других языков программирования.
+
+После установки вам потребуется настроить конфигурацию. Для этого 
+- используйте сочетание клавиш `Ctrl + P` или `Command + Shift + P`
+- в появившемся окне введите `>format` и выберите `Format Document`
+- в первый раз вам будет предложено выбрать приложения для форматирования. Выберите `Prettier`
+- в следующий раз можете запускать форматирование по сочатанию клавиш, которое написано рядом с `Format Document`
+
+<div align="center">
+    <img src="./assets/format-config.jpg">
+</div>
 </details>
