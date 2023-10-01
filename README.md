@@ -173,7 +173,7 @@
 ### Установка Git
 
 - Если у вас нет пакетного менеджера Brew, необходимо сначала установить его. Переходит на оф. сайт и https://brew.sh/ и копируем команду оттуда
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`. Brew попросит ввести еще 2 команды: `echo 'eval $(/opt/homebrew/bin/brew shellenv)'  >> /Users/ИМЯ ТВОЕГО ПОЛЬЗОВАТЕЛЯ НА МАКЕ/.zprofile`. Следующим вводим команду`eval $(/opt/homebrew/bin/brew shellenv)`. Готово! 
 - Затем вводим в терминал `brew install git`
 - Можно проверить, что у вас установился `git`, введя в терминале `git`. Должен открыться список команд.
 
